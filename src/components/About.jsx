@@ -1,12 +1,11 @@
 import React from 'react'
 import {ABOUT_TEXT} from '../constants/index.js'
-import aboutimg from '../assets/about.jpg'
 import {delay, motion} from 'framer-motion'
 import img1 from '../assets/img1.jpg'
 
 function About() {
   return (
-    <div className='border-b border-neutral-900 mb-8 pb-20 pt-16'>
+    <div className='border-b border-neutral-900 mb-8 pb-20 pt-16' id='About'>
       <h2 className=' py-6 flex justify-center text-4xl'>
         About&nbsp;
         <span className='text-neutral-500'>Me</span> 
@@ -21,7 +20,7 @@ function About() {
         
           className='flex items-center justify-center'>
 
-            <img src={img1} className='rounded-2xl h-[400px] w-[400px]' alt="" />
+            <img src={img1} className='rounded-2xl md:h-[400px] md:w-[400px] h-[300px]' alt="" />
           </div>  </motion.div>
           <motion.div
           whileInView={{opacity:1,x:0}}

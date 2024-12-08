@@ -1,5 +1,4 @@
 import React from 'react'
-import Profileimg from '../assets/kevinRushProfile.jpg'
 import {HERO_CONTENT} from '../constants/index.js'
 import {motion} from 'framer-motion'
 import { Container } from 'postcss'
@@ -18,7 +17,7 @@ const container=(delay)=>({
 
 const Hero = () => {
   return (
-    <div className='border-b border-neutral-900 pb-14  lg:mb-35'>
+    <div id='Hero' className='border-b border-neutral-900 pb-14  lg:mb-35'>
         <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2">
                   <div className="flex flex-col items-center lg:items-start">
@@ -33,7 +32,7 @@ const Hero = () => {
                     className=' bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500  bg-clip-text tracking-tight text-transparent text-3xl'>FULL STACK DEVELOPER</motion.span>
                     <motion.p variants={container(1)}
                     initial="hidden"
-                    animate="visible" className=' tracking-tighter font-light py-6 max-w-xl my-2'>
+                    animate="visible" className='  font-light py-6 max-w-xl my-2'>
                       {HERO_CONTENT}
                       </motion.p>  
 

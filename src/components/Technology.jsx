@@ -23,7 +23,7 @@ const iconvariant=(duration)=>({
 
 function Technology() {
   return (
-    <div className='border-b border-neutral-800 pb-16 pt-16'>
+    <div id='Technology' className='border-b border-neutral-800 pb-16 pt-16'>
         <motion.h2 whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-100}} transition={{duration:0.5}} className='text-4xl flex justify-center items-center'>Technology</motion.h2>
         <motion.div initial={{opacity:0, x:-100}} transition={{duration:0.5}}
         whileInView={{opacity:1,x:0}} className='flex flex-wrap justify-center my-12 py-8 gap-4'>
