@@ -1,5 +1,6 @@
 {
-"homepage": "https://Aniketdesai007.github.io/Portfolio",  "name": "myportfolio",
+"homepage": "https://aniketdesai007.github.io/Portfolio",
+  "name": "myportfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
