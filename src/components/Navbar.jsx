@@ -6,15 +6,13 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="bg-transparent text-white">
+      <nav className="bg-transparent text-white pr-12 ">
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
-          {/* Logo */}
           <div className="text-2xl font-bold">
-            <a href="#">Brand</a>
+            <a href="#">AD</a>
           </div>
 
-          {/* Hamburger Menu for Mobile */}
+         
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -47,13 +45,12 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Nav Links */}
           <div
-            className={`absolute top-16 left-0 w-full bg-transparent md:static md:flex md:w-auto transition-all duration-300 ${
+            className={`absolute top-16 left-0 w-full bg-transparent px-[5rem] md:static md:flex md:w-auto transition-all duration-300 ${
               isOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="md:flex md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
+            <ul className="md:flex md:items-center cursor-pointer space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
               <li>
                 <Link to="Hero"  spy={true} smooth={true} offset={0} duration={1000} className="hover:text-gray-400">
                   Home
