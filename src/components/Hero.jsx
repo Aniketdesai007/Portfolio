@@ -42,7 +42,7 @@ const Hero = () => {
             <motion.div initial={{x:100,opacity:0}}
             animate={{opacity:1,x:0}}
             transition={{duration:0.5 ,delay:1.2}}
-            className='felx justify-center mt-20 ml-14'>
+            className='felx justify-center mt-20 relative left-[25%] md:left-5  md:w-1/2 md:pl-[4rem]'>
               <img src={img3} alt="img3"  className='rounded-full h-[300px] w-[300px]'/>
             </motion.div>
 

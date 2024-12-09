@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <nav className="bg-transparent text-white pr-12 ">
+      <nav className="text-white pr-12 font-medium fixed bg-black w-full top-0 left-0 z-50 shadow">
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
           <div className="text-2xl font-bold">
             <a href="#">AD</a>
           </div>
 
-         
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -46,28 +45,64 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`absolute top-16 left-0 w-full bg-transparent px-[5rem] md:static md:flex md:w-auto transition-all duration-300 ${
+            className={`fixed top-16 left-0 w-full z-50 shadow bg-transparent px-[5rem] md:static md:flex md:w-auto transition-all duration-300 ${
               isOpen ? "block" : "hidden"
             }`}
           >
             <ul className="md:flex md:items-center cursor-pointer space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
               <li>
-                <Link to="Hero"  spy={true} smooth={true} offset={0} duration={1000} className="hover:text-gray-400">
+                <Link
+                  to="Hero"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={1000}
+                  activeClass="text-cyan-400 font-semibold"
+                  className="hover:text-gray-400"
+                  onClick={() => setIsOpen(false)}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="About"  spy={true} smooth={true} offset={0} duration={1000} className="hover:text-gray-400">
+                <Link
+                  to="About"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={1000}
+                  activeClass="text-cyan-400 font-semibold"
+                  className="hover:text-gray-400"
+                  onClick={() => setIsOpen(false)}
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="Technology"  spy={true} smooth={true} offset={0} duration={1500} className="hover:text-gray-400">
-                 Technology
+                <Link
+                  to="Technology"
+                  spy={true}
+                  smooth={true}
+                  offset={-90}
+                  duration={1500}
+                  activeClass="text-cyan-400 font-semibold"
+                  className="hover:text-gray-400"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Technology
                 </Link>
               </li>
               <li>
-                <Link to="Contact"  spy={true} smooth={true} offset={0} duration={2500} className="hover:text-gray-400">
+                <Link
+                  to="Contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={1500}
+                  activeClass="text-cyan-400 font-semibold"
+                  className="hover:text-gray-400"
+                  onClick={() => setIsOpen(false)}
+                >
                   Contact
                 </Link>
               </li>
@@ -76,13 +111,15 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
+      {isOpen && (
+        <div className="fixed inset-0 top-16 left-0 w-full h-full bg-black opacity-50 backdrop-blur-lg z-40 md:hidden"></div>
+      )}
+
       <div
         className={`container mx-auto px-4 transition-all duration-300 ${
           isOpen ? "mt-40" : "mt-16"
         }`}
       >
-
       </div>
     </>
   );
