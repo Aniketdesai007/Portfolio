@@ -1,5 +1,5 @@
 {
-"homepage": "https://aniketdesai007.github.io/Portfolio",
+  "homepage": "https://aniketdesai007.github.io/Portfolio",
   "name": "myportfolio",
   "private": true,
   "version": "0.0.0",
@@ -9,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^11.13.1",
