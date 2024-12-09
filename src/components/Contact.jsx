@@ -9,7 +9,7 @@ function Contact() {
       <div className="text-center tracking-tighter ">
        <motion.p whileInView={{opacity:1,x:0}} initial={{opacity:0,x:-100}} transition={{duration:1}} className='pb-2'>{CONTACT.address}</motion.p>
        <motion.p whileInView={{opacity:1,x:0}} initial={{opacity:0,x:100}} transition={{duration:1}} className='pb-2'>{CONTACT.phoneNo}</motion.p>
-     <motion.a  whileInView={{opacity:1,x:0 }} initial={{opacity:0,x:100}} transition={{duration:1}}  href="#" className='border-b border-slate-900'>{CONTACT.email}</motion.a>
+     <motion.a  whileInView={{opacity:1,x:0 }} initial={{opacity:0,x:100}} transition={{duration:1}}  href="#" className='border-b border-slate-800'>{CONTACT.email}</motion.a>
       </div>
     </div>
   )
